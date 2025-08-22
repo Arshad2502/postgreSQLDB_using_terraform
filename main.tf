@@ -33,15 +33,6 @@ resource "azurerm_postgresql_flexible_server" "db" {
 
   storage_mb             = 32768
   sku_name               = "B_Standard_B1ms"   # Burstable small SKU
-
-  backup {
-    backup_retention_days        = 7
-    geo_redundant_backup_enabled = false
-  }
-
-  network {
-    public_network_access_enabled = true
-  }
 }
 
 # --------------------
