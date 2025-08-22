@@ -50,5 +50,5 @@ resource "azurerm_postgresql_flexible_server_database" "appdb" {
 # --------------------
 output "postgres_connection_string" {
   value = "postgresql://${azurerm_postgresql_flexible_server.db.administrator_login}:${azurerm_postgresql_flexible_server.db.administrator_password}@${azurerm_postgresql_flexible_server.db.fqdn}:5432/${azurerm_postgresql_flexible_server_database.appdb.name}"
-#  sensitive = true
+  sensitive = true
 }
